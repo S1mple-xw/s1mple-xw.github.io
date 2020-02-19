@@ -7,19 +7,16 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
 
-<title>Tags - CreepCode</title>
+<title>Tag: Class - CreepCode</title>
 
 
     <meta property="og:type" content="website">
 <meta property="og:title" content="CreepCode">
-<meta property="og:url" content="http://yoursite.com/tags/index.html">
+<meta property="og:url" content="http://yoursite.com/tags/Class/index.html">
 <meta property="og:site_name" content="CreepCode">
 <meta property="og:locale" content="en_US">
 <meta property="og:image" content="http://yoursite.com/images/og_image.png">
 <meta property="article:author" content="creep">
-<meta property="article:tag" content="Arrays">
-<meta property="article:tag" content="Object">
-<meta property="article:tag" content="Class">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="http://yoursite.com/images/og_image.png">
 
@@ -96,7 +93,7 @@
                 <a class="navbar-item"
                 href="/categories">Categories</a>
                 
-                <a class="navbar-item is-active"
+                <a class="navbar-item"
                 href="/tags">Tags</a>
                 
             </div>
@@ -125,39 +122,73 @@
     <section class="section">
         <div class="container">
             <div class="columns">
-                <div class="column is-8-tablet is-8-desktop is-6-widescreen has-order-2 column-main"><div class="card widget">
+                <div class="column is-8-tablet is-8-desktop is-6-widescreen has-order-2 column-main"><div class="card">
     <div class="card-content">
-        <div class="menu">
-            <h3 class="menu-label">
-                Tags
-            </h3>
-            <div class="field is-grouped is-grouped-multiline">
+        <nav class="breadcrumb" aria-label="breadcrumbs">
+        <ul>
+            <li><a href="/tags">Tags</a></li>
+            <li class="is-active"><a href="#" aria-current="page">Class</a></li>
+        </ul>
+        </nav>
+    </div>
+</div>
+
+    
+<div class="card">
+    
+    <div class="card-content article ">
+        
+        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
+            <div class="level-left">
+                <time class="level-item has-text-grey" datetime="2020-02-19T08:46:17.000Z">2020-02-19</time>
                 
-                <div class="control">
-                    <a class="tags has-addons" href="/tags/Arrays/">
-                        <span class="tag">Arrays</span>
-                        <span class="tag is-grey">1</span>
-                    </a>
+                <div class="level-item">
+                <a class="has-link-grey -link" href="/categories/java%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/">java学习笔记</a>
                 </div>
                 
-                <div class="control">
-                    <a class="tags has-addons" href="/tags/Class/">
-                        <span class="tag">Class</span>
-                        <span class="tag is-grey">1</span>
-                    </a>
-                </div>
                 
-                <div class="control">
-                    <a class="tags has-addons" href="/tags/Object/">
-                        <span class="tag">Object</span>
-                        <span class="tag is-grey">1</span>
-                    </a>
-                </div>
+                <span class="level-item has-text-grey">
+                    
+                    
+                    2 minutes read (About 317 words)
+                </span>
+                
                 
             </div>
         </div>
+        
+        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
+            
+                <a class="has-link-black-ter" href="/2020/02/19/Class/">Class</a>
+            
+        </h1>
+        <div class="content">
+            <h1 id="对象和类"><a href="#对象和类" class="headerlink" title="对象和类"></a><strong>对象和类</strong></h1><h3 id="1-定义类的语法"><a href="#1-定义类的语法" class="headerlink" title="1.定义类的语法"></a><strong>1.定义类的语法</strong></h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> 类名｛</span></span><br><span class="line"><span class="class"></span></span><br><span class="line"><span class="class">//<span class="title">a</span>.属性</span></span><br><span class="line"><span class="class"></span></span><br><span class="line"><span class="class">//<span class="title">b</span>.函数，方法</span></span><br><span class="line"><span class="class"></span></span><br><span class="line"><span class="class">｝</span></span><br><span class="line"><span class="class"></span></span><br><span class="line"><span class="class">//举例</span></span><br><span class="line"><span class="class"></span></span><br><span class="line"><span class="class"><span class="title">public</span> <span class="title">class</span> <span class="title">Dog</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">​	<span class="comment">//属性----成员变量（有默认值）</span></span><br><span class="line"></span><br><span class="line">String color;</span><br><span class="line"></span><br><span class="line">String name;</span><br><span class="line"></span><br><span class="line"><span class="keyword">int</span> age;</span><br><span class="line"></span><br><span class="line">String type;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">eat</span><span class="params">(String food)</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">​	System.out.println(<span class="string">"狗狗在吃："</span>+food);</span><br><span class="line"></span><br><span class="line">&#125;<span class="comment">//加上static 和不加只是调用不同，暂时不加</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">shout</span><span class="params">()</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">​	System.out.println(type+<span class="string">"的狗在大叫"</span>);</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">introduce</span><span class="params">()</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">​	System.out.println(<span class="string">"这只泰迪"</span>+age+<span class="string">"岁了"</span>);</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="2-定义对象的语法"><a href="#2-定义对象的语法" class="headerlink" title="2.定义对象的语法"></a><strong>2.定义对象的语法</strong></h3><pre><code>类名 变量名 = new 类名（）；</code></pre><p>​    访问属性：对象名.属性名；</p>
+<p>​    访问方法：对象名.方法名；</p>
+<h3 id="3-类和对象在内存中的分析"><a href="#3-类和对象在内存中的分析" class="headerlink" title="3.类和对象在内存中的分析"></a><strong>3.类和对象在内存中的分析</strong></h3><h3 id="4-构造方法"><a href="#4-构造方法" class="headerlink" title="4.构造方法"></a><strong>4.构造方法</strong></h3><p>​        每一个类中都有一个默认的隐藏的构造方法（没有参数）</p>
+<p>​        但是当我们写了有参数的构造方法之后，无参数的构造方法就没了，需要手动添加.              </p>
+<p>​        构造方法的作用：</p>
+<h4 id="a-用来创建对象-new-构造方法（构造器）"><a href="#a-用来创建对象-new-构造方法（构造器）" class="headerlink" title="a.用来创建对象 new+构造方法（构造器）"></a>a.用来创建对象 new+构造方法（构造器）</h4><h4 id="b-初始化成员变量"><a href="#b-初始化成员变量" class="headerlink" title="b.初始化成员变量"></a>b.初始化成员变量</h4><p>例子：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="title">Dog</span><span class="params">()</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">​		System.out.println(<span class="string">"构造方法"</span>);</span><br><span class="line"></span><br><span class="line">​	&#125;</span><br><span class="line"></span><br><span class="line">​	<span class="comment">//有参构造给成员变量赋值</span></span><br><span class="line"></span><br><span class="line">​	<span class="function"><span class="keyword">public</span> <span class="title">Dog</span><span class="params">(String name,String color,<span class="keyword">int</span> age)</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">​		<span class="keyword">this</span>.name = name ;</span><br><span class="line"></span><br><span class="line">​		<span class="keyword">this</span>.color = color;</span><br><span class="line"></span><br><span class="line">​		<span class="keyword">this</span>.age = age ;</span><br><span class="line"></span><br><span class="line">​	&#125;</span><br></pre></td></tr></table></figure>
+
+
+        </div>
+        
+        
+        
     </div>
-</div></div>
+</div>
+
+
+
+
+
+
+
+
+</div>
                 
 
 
