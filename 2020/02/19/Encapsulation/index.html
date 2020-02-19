@@ -7,16 +7,21 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
 
-<title>Tag: Arrays - CreepCode</title>
+<title>Encapsulation(封装) - CreepCode</title>
 
 
-    <meta property="og:type" content="website">
-<meta property="og:title" content="CreepCode">
-<meta property="og:url" content="http://yoursite.com/tags/Arrays/index.html">
+    <meta name="description" content="在Java总封装提供了四个权限修饰符：public：公共的—整个项目中所有的都可以访问（项目可见性） protected：受保护的—当前包以及其他包的子类 default：默认的–当前包（包可见性） private：私有的–当前类（类可见性） 为什么需要封装？a.方便访问 b.数据安全性 ​                    public          protected">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Encapsulation(封装)">
+<meta property="og:url" content="http://yoursite.com/2020/02/19/Encapsulation/index.html">
 <meta property="og:site_name" content="CreepCode">
+<meta property="og:description" content="在Java总封装提供了四个权限修饰符：public：公共的—整个项目中所有的都可以访问（项目可见性） protected：受保护的—当前包以及其他包的子类 default：默认的–当前包（包可见性） private：私有的–当前类（类可见性） 为什么需要封装？a.方便访问 b.数据安全性 ​                    public          protected">
 <meta property="og:locale" content="en_US">
 <meta property="og:image" content="http://yoursite.com/images/og_image.png">
+<meta property="article:published_time" content="2020-02-19T09:22:33.000Z">
+<meta property="article:modified_time" content="2020-02-19T09:26:27.999Z">
 <meta property="article:author" content="creep">
+<meta property="article:tag" content="Encapsulation">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="http://yoursite.com/images/og_image.png">
 
@@ -76,7 +81,7 @@
         <div class="navbar-brand is-flex-center">
             <a class="navbar-item navbar-logo" href="/">
             
-                <img src="/images/logo.svg" alt="CreepCode" height="28">
+                <img src="/images/logo.svg" alt="Encapsulation(封装)" height="28">
             
             </a>
         </div>
@@ -122,25 +127,14 @@
     <section class="section">
         <div class="container">
             <div class="columns">
-                <div class="column is-8-tablet is-8-desktop is-6-widescreen has-order-2 column-main"><div class="card">
-    <div class="card-content">
-        <nav class="breadcrumb" aria-label="breadcrumbs">
-        <ul>
-            <li><a href="/tags">Tags</a></li>
-            <li class="is-active"><a href="#" aria-current="page">Arrays</a></li>
-        </ul>
-        </nav>
-    </div>
-</div>
-
-    
+                <div class="column is-8-tablet is-8-desktop is-6-widescreen has-order-2 column-main">
 <div class="card">
     
     <div class="card-content article ">
         
         <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
             <div class="level-left">
-                <time class="level-item has-text-grey" datetime="2020-02-19T08:26:37.000Z">2020-02-19</time>
+                <time class="level-item has-text-grey" datetime="2020-02-19T09:22:33.000Z">2020-02-19</time>
                 
                 <div class="level-item">
                 <a class="has-link-grey -link" href="/categories/java%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/">java学习笔记</a>
@@ -150,7 +144,7 @@
                 <span class="level-item has-text-grey">
                     
                     
-                    3 minutes read (About 425 words)
+                    2 minutes read (About 335 words)
                 </span>
                 
                 
@@ -159,54 +153,44 @@
         
         <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
             
-                <a class="has-link-black-ter" href="/2020/02/19/Array/">Array(数组)</a>
+                Encapsulation(封装)
             
         </h1>
         <div class="content">
-            <h3 id="1-特点："><a href="#1-特点：" class="headerlink" title="1.特点："></a><strong>1.特点：</strong></h3><pre><code>a.数组一旦被定义，大小不可改变（java特性，长度一开始就定义好了）
+            <h4 id="在Java总封装提供了四个权限修饰符："><a href="#在Java总封装提供了四个权限修饰符：" class="headerlink" title="在Java总封装提供了四个权限修饰符："></a>在Java总封装提供了四个权限修饰符：</h4><p>public：公共的—整个项目中所有的都可以访问（项目可见性）</p>
+<p>protected：受保护的—当前包以及其他包的子类</p>
+<p>default：默认的–当前包（包可见性）</p>
+<p>private：私有的–当前类（类可见性）</p>
+<h4 id="为什么需要封装？"><a href="#为什么需要封装？" class="headerlink" title="为什么需要封装？"></a>为什么需要封装？</h4><p>a.方便访问</p>
+<p>b.数据安全性</p>
+<p>​                    public          protected            default        private</p>
+<p>类                   *                                              *</p>
+<p>属性               *                     *                        *                 *</p>
+<p>方法               *                     *                        *                 *</p>
+<p>//如果类是被public修饰的，那么构造方法也是被public修饰</p>
+<p>//构造方法不是所有的都是被public修饰的，他根据类来决定</p>
+<p>//使用私有封装属性是最常用的，因为以防数据不合理和数据不安全</p>
+<p>//给私有属性提供setter和getter方法</p>
+<p>格式 set+属性名（首字母大写） get+属性名（首字母大写） </p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Cat</span></span>&#123;</span><br><span class="line"></span><br><span class="line"><span class="keyword">private</span> <span class="keyword">int</span> age ;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">setAge</span><span class="params">(<span class="keyword">int</span> age)</span></span>&#123;</span><br><span class="line"></span><br><span class="line"><span class="keyword">this</span>.age = age ;</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">getAge</span><span class="params">()</span></span>&#123;</span><br><span class="line"></span><br><span class="line"><span class="keyword">return</span> age ;</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
-b.数组是引用数据类型，但是数组可以被定义成存储任意类型8个基本类型
+<h4 id="this的作用-："><a href="#this的作用-：" class="headerlink" title="this的作用 ："></a>this的作用 ：</h4><p>a.访问方法</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">a</span><span class="params">()</span></span>&#123;&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">b</span><span class="params">()</span></span>&#123;</span><br><span class="line"></span><br><span class="line"><span class="keyword">this</span>.a();<span class="comment">//访问当前类中的其他方法</span></span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
- c.数组中的数据类型必须是一致的，和定义的类型一致数组在创建时就一定要声明类型，然后数组就只能存储这个类            型
+<p>b.访问属性</p>
+<p>当成员变量和局部变量同名时，用this.xx代表成员变量</p>
+<p>c.访问构造方法</p>
+<p>this.(值)—表示调用当前类中的构造方法（只能写在第一行）</p>
 
-d.数组有默认值，默认是就是定义类型的默认值
-
-     byte short int ---0
-
-     long--0L
-
-     float double ---0.0
-
-     char---\u000
-
-     String----null
-
-e.数组有顺序，以下标定义 从0-length-1    </code></pre><h3 id="2-声明"><a href="#2-声明" class="headerlink" title="2.声明"></a><strong>2.声明</strong></h3><h3 id="a-动态赋值"><a href="#a-动态赋值" class="headerlink" title="a.动态赋值"></a>a.动态赋值</h3><p>​        通过下标赋值</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">int</span> [] arr;</span><br></pre></td></tr></table></figure>
-
-<p>​        //声明一个变量这个变量是数组类型的，名字都叫做arr</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">arr = <span class="keyword">new</span> <span class="keyword">int</span>[<span class="number">3</span>];</span><br></pre></td></tr></table></figure>
-
-<p>​        //给开辟一个空间，大小为3，没有值，把这个空间赋值给变量arr</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">int</span> [] arr = <span class="keyword">new</span> <span class="keyword">int</span>[<span class="number">3</span>];</span><br><span class="line"></span><br><span class="line">arr[<span class="number">0</span>] = <span class="number">12</span>;</span><br></pre></td></tr></table></figure>
-
-<p>​    b.静态初始化</p>
-<p>​    c.默认初始化</p>
-<h3 id="3-操作"><a href="#3-操作" class="headerlink" title="3.操作"></a><strong>3.操作</strong></h3><p>​    a.冒泡排序：比较相邻的两个数</p>
-<p>​    b.增删改</p>
-<p>​        增：先进行数组扩容</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">​		<span class="keyword">int</span> [] arr1 = &#123;<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>,<span class="number">6</span>,<span class="number">7</span>&#125;;</span><br><span class="line"></span><br><span class="line">​		add(arr1,<span class="number">3</span>,<span class="number">10</span>);</span><br><span class="line"></span><br><span class="line">​	&#125;</span><br><span class="line"></span><br><span class="line">​	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">add</span><span class="params">(<span class="keyword">int</span> [] arr,<span class="keyword">int</span> index,<span class="keyword">int</span> a)</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">​		<span class="keyword">int</span> [] arr2 = <span class="keyword">new</span> <span class="keyword">int</span>[arr.length+<span class="number">1</span>];</span><br><span class="line"></span><br><span class="line">​		<span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;arr.length;i++) &#123;</span><br><span class="line"></span><br><span class="line">​			arr2[i] = arr[i];</span><br><span class="line"></span><br><span class="line">​			</span><br><span class="line"></span><br><span class="line">​		&#125;</span><br><span class="line"></span><br><span class="line">​		arr = arr2;</span><br><span class="line"></span><br><span class="line">​		<span class="keyword">if</span>(index&gt;=arr.length) &#123;</span><br><span class="line"></span><br><span class="line">​			System.out.println(<span class="string">"下标越界"</span>);</span><br><span class="line"></span><br><span class="line">​		&#125;</span><br><span class="line"></span><br><span class="line">​		<span class="keyword">else</span> &#123;</span><br><span class="line"></span><br><span class="line">​		<span class="keyword">for</span>(<span class="keyword">int</span> i=arr.length-<span class="number">1</span>;i&gt;=index;i--) &#123;</span><br><span class="line"></span><br><span class="line">​			arr[i] = arr[i-<span class="number">1</span>];</span><br><span class="line"></span><br><span class="line">​		&#125;</span><br><span class="line"></span><br><span class="line">​		arr[index] = a;</span><br><span class="line"></span><br><span class="line">​		System.out.println(Arrays.toString(arr));</span><br><span class="line"></span><br><span class="line">​		&#125;</span><br><span class="line"></span><br><span class="line">​	&#125;</span><br></pre></td></tr></table></figure>
-
-<p>​    c.查询</p>
-<p>​        forEach</p>
-<p>​        格式：for（数据类型 变量名：数组）{}</p>
-<h3 id="4-二维数组"><a href="#4-二维数组" class="headerlink" title="4.二维数组"></a><strong>4.二维数组</strong></h3><p>​    a.动态初始化</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">int</span> [][] arr = <span class="keyword">new</span> <span class="keyword">int</span> [][];</span><br></pre></td></tr></table></figure>
-
-<p>​    b.静态赋值</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">int</span>[][] arr = &#123;</span><br><span class="line"></span><br><span class="line">｛<span class="number">1</span>，<span class="number">2</span>，<span class="number">3</span>｝，</span><br><span class="line"></span><br><span class="line">｛<span class="number">4</span>，<span class="number">5</span>，<span class="number">6</span>｝</span><br><span class="line"></span><br><span class="line">｝</span><br></pre></td></tr></table></figure>
-
-
+        </div>
+        
+        <div class="level is-size-7 is-uppercase">
+            <div class="level-start">
+                <div class="level-item">
+                    <span class="is-size-6 has-text-grey has-mr-7">#</span>
+                    <a class="has-link-grey -link" href="/tags/Encapsulation/" rel="tag">Encapsulation</a>
+                </div>
+            </div>
         </div>
         
         
@@ -216,11 +200,60 @@ e.数组有顺序，以下标定义 从0-length-1    </code></pre><h3 id="2-声�
 
 
 
+<div class="card">
+    <div class="card-content">
+        <h3 class="menu-label has-text-centered">Like this article? Support the author with</h3>
+        <div class="buttons is-centered">
+            
+        </div>
+    </div>
+</div>
 
 
 
+<div class="card card-transparent">
+    <div class="level post-navigation is-flex-wrap is-mobile">
+        
+        <div class="level-start">
+            <a class="level level-item has-link-grey  article-nav-prev" href="/2020/02/19/Abstract/">
+                <i class="level-item fas fa-chevron-left"></i>
+                <span class="level-item">Abstract(抽象)</span>
+            </a>
+        </div>
+        
+        
+        <div class="level-end">
+            <a class="level level-item has-link-grey  article-nav-next" href="/2020/02/19/Extends/">
+                <span class="level-item">Extends(继承)</span>
+                <i class="level-item fas fa-chevron-right"></i>
+            </a>
+        </div>
+        
+    </div>
+</div>
 
 
+
+<div class="card">
+    <div class="card-content">
+        <h3 class="title is-5 has-text-weight-normal">Comments</h3>
+        
+<div id="valine-thread" class="content"></div>
+<script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/valine@1.3.10/dist/Valine.min.js"></script>
+<script>
+    new Valine({
+        el: '#valine-thread' ,
+        notify: false,
+        verify: false,
+        app_id: 'qwwcRBlAM8QyWi0u9RQDi4O4-gzGzoHsz',
+        app_key: 'Qal7yogGJtekUyIKjiyfGAFa',
+        placeholder: '留下你的想法...'
+    });
+</script>
+
+    </div>
+</div>
 </div>
                 
 
@@ -803,7 +836,7 @@ e.数组有顺序，以下标定义 从0-length-1    </code></pre><h3 id="2-声�
             <div class="level-start has-text-centered-mobile">
                 <a class="footer-logo is-block has-mb-6" href="/">
                 
-                    <img src="/images/logo.svg" alt="CreepCode" height="28">
+                    <img src="/images/logo.svg" alt="Encapsulation(封装)" height="28">
                 
                 </a>
                 <p class="is-size-7">
