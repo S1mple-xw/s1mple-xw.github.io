@@ -7,17 +7,16 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
 
-<title>Categories - CreepCode</title>
+<title>CreepCode</title>
 
 
     <meta property="og:type" content="website">
 <meta property="og:title" content="CreepCode">
-<meta property="og:url" content="http://yoursite.com/categories/index.html">
+<meta property="og:url" content="http://yoursite.com/index.html">
 <meta property="og:site_name" content="CreepCode">
 <meta property="og:locale" content="en_US">
 <meta property="og:image" content="http://yoursite.com/images/og_image.png">
 <meta property="article:author" content="creep">
-<meta property="article:tag" content="Arrays">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="http://yoursite.com/images/og_image.png">
 
@@ -85,13 +84,13 @@
             
             <div class="navbar-start">
                 
-                <a class="navbar-item"
+                <a class="navbar-item is-active"
                 href="/">Home</a>
                 
                 <a class="navbar-item"
                 href="/archives">Archives</a>
                 
-                <a class="navbar-item is-active"
+                <a class="navbar-item"
                 href="/categories">Categories</a>
                 
                 <a class="navbar-item"
@@ -124,26 +123,95 @@
         <div class="container">
             <div class="columns">
                 <div class="column is-8-tablet is-8-desktop is-6-widescreen has-order-2 column-main">
-<div class="card widget">
-    <div class="card-content">
-        <div class="menu">
-            <h3 class="menu-label">
-                Categories
-            </h3>
-            <ul class="menu-list">
-            <li>
-        <a class="level is-marginless" href="/categories/java%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/">
-            <span class="level-start">
-                <span class="level-item">java学习笔记</span>
-            </span>
-            <span class="level-end">
-                <span class="level-item tag">1</span>
-            </span>
-        </a></li>
-            </ul>
+    
+<div class="card">
+    
+    <div class="card-content article ">
+        
+        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
+            <div class="level-left">
+                <time class="level-item has-text-grey" datetime="2020-02-19T08:26:37.000Z">2020-02-19</time>
+                
+                <div class="level-item">
+                <a class="has-link-grey -link" href="/categories/java%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/">java学习笔记</a>
+                </div>
+                
+                
+                <span class="level-item has-text-grey">
+                    
+                    
+                    3 minutes read (About 427 words)
+                </span>
+                
+                
+            </div>
         </div>
+        
+        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
+            
+                <a class="has-link-black-ter" href="/2020/02/19/Array/">Array</a>
+            
+        </h1>
+        <div class="content">
+            <h1 id="数组"><a href="#数组" class="headerlink" title="数组"></a><strong>数组</strong></h1><h3 id="1-特点："><a href="#1-特点：" class="headerlink" title="1.特点："></a><strong>1.特点：</strong></h3><pre><code>a.数组一旦被定义，大小不可改变（java特性，长度一开始就定义好了）
+
+b.数组是引用数据类型，但是数组可以被定义成存储任意类型8个基本类型
+
+ c.数组中的数据类型必须是一致的，和定义的类型一致数组在创建时就一定要声明类型，然后数组就只能存储这个类            型
+
+d.数组有默认值，默认是就是定义类型的默认值
+
+     byte short int ---0
+
+     long--0L
+
+     float double ---0.0
+
+     char---\u000
+
+     String----null
+
+e.数组有顺序，以下标定义 从0-length-1    </code></pre><h3 id="2-声明"><a href="#2-声明" class="headerlink" title="2.声明"></a><strong>2.声明</strong></h3><h3 id="a-动态赋值"><a href="#a-动态赋值" class="headerlink" title="a.动态赋值"></a>a.动态赋值</h3><p>​        通过下标赋值</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">int</span> [] arr;</span><br></pre></td></tr></table></figure>
+
+<p>​        //声明一个变量这个变量是数组类型的，名字都叫做arr</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">arr = <span class="keyword">new</span> <span class="keyword">int</span>[<span class="number">3</span>];</span><br></pre></td></tr></table></figure>
+
+<p>​        //给开辟一个空间，大小为3，没有值，把这个空间赋值给变量arr</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">int</span> [] arr = <span class="keyword">new</span> <span class="keyword">int</span>[<span class="number">3</span>];</span><br><span class="line"></span><br><span class="line">arr[<span class="number">0</span>] = <span class="number">12</span>;</span><br></pre></td></tr></table></figure>
+
+<p>​    b.静态初始化</p>
+<p>​    c.默认初始化</p>
+<h3 id="3-操作"><a href="#3-操作" class="headerlink" title="3.操作"></a><strong>3.操作</strong></h3><p>​    a.冒泡排序：比较相邻的两个数</p>
+<p>​    b.增删改</p>
+<p>​        增：先进行数组扩容</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">​		<span class="keyword">int</span> [] arr1 = &#123;<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>,<span class="number">6</span>,<span class="number">7</span>&#125;;</span><br><span class="line"></span><br><span class="line">​		add(arr1,<span class="number">3</span>,<span class="number">10</span>);</span><br><span class="line"></span><br><span class="line">​	&#125;</span><br><span class="line"></span><br><span class="line">​	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">add</span><span class="params">(<span class="keyword">int</span> [] arr,<span class="keyword">int</span> index,<span class="keyword">int</span> a)</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">​		<span class="keyword">int</span> [] arr2 = <span class="keyword">new</span> <span class="keyword">int</span>[arr.length+<span class="number">1</span>];</span><br><span class="line"></span><br><span class="line">​		<span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;arr.length;i++) &#123;</span><br><span class="line"></span><br><span class="line">​			arr2[i] = arr[i];</span><br><span class="line"></span><br><span class="line">​			</span><br><span class="line"></span><br><span class="line">​		&#125;</span><br><span class="line"></span><br><span class="line">​		arr = arr2;</span><br><span class="line"></span><br><span class="line">​		<span class="keyword">if</span>(index&gt;=arr.length) &#123;</span><br><span class="line"></span><br><span class="line">​			System.out.println(<span class="string">"下标越界"</span>);</span><br><span class="line"></span><br><span class="line">​		&#125;</span><br><span class="line"></span><br><span class="line">​		<span class="keyword">else</span> &#123;</span><br><span class="line"></span><br><span class="line">​		<span class="keyword">for</span>(<span class="keyword">int</span> i=arr.length-<span class="number">1</span>;i&gt;=index;i--) &#123;</span><br><span class="line"></span><br><span class="line">​			arr[i] = arr[i-<span class="number">1</span>];</span><br><span class="line"></span><br><span class="line">​		&#125;</span><br><span class="line"></span><br><span class="line">​		arr[index] = a;</span><br><span class="line"></span><br><span class="line">​		System.out.println(Arrays.toString(arr));</span><br><span class="line"></span><br><span class="line">​		&#125;</span><br><span class="line"></span><br><span class="line">​	&#125;</span><br></pre></td></tr></table></figure>
+
+<p>​    c.查询</p>
+<p>​        forEach</p>
+<p>​        格式：for（数据类型 变量名：数组）{}</p>
+<h3 id="4-二维数组"><a href="#4-二维数组" class="headerlink" title="4.二维数组"></a><strong>4.二维数组</strong></h3><p>​    a.动态初始化</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">int</span> [][] arr = <span class="keyword">new</span> <span class="keyword">int</span> [][];</span><br></pre></td></tr></table></figure>
+
+<p>​    b.静态赋值</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">int</span>[][] arr = &#123;</span><br><span class="line"></span><br><span class="line">｛<span class="number">1</span>，<span class="number">2</span>，<span class="number">3</span>｝，</span><br><span class="line"></span><br><span class="line">｛<span class="number">4</span>，<span class="number">5</span>，<span class="number">6</span>｝</span><br><span class="line"></span><br><span class="line">｝</span><br></pre></td></tr></table></figure>
+
+
+        </div>
+        
+        
+        
     </div>
-</div></div>
+</div>
+
+
+
+
+
+
+
+
+</div>
                 
 
 
