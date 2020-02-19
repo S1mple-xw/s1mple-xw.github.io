@@ -4,6 +4,31 @@
   
     
     <entry>
+      <title>Extends</title>
+      <link href="/2020/02/19/Extends/"/>
+      <url>/2020/02/19/Extends/</url>
+      
+        <content type="html"><![CDATA[<h1 id="2-继承"><a href="#2-继承" class="headerlink" title="2.继承"></a><strong>2.继承</strong></h1><p>​    extends —继承父类非私有的属性和方法</p><p><em>注意点：不能多继承，但是可以多层次继承</em></p><p><strong>super</strong>—指的是父类本身</p><p>a.访问方法：访问当前父类中的方法，使用super.方法();</p><p>b.访问属性：访问当前父类中的属性，super.属性</p><p>c.访问构造方法：调用父类的构造方法，只能写在第一行，super(值)</p><p><em>重写：当父类的方法不满足子类的需求的时候需要重写，只改变方法体</em></p><p>​    <em>（此处区分重载和重写的区别）</em></p><h3 id="toString方法："><a href="#toString方法：" class="headerlink" title="toString方法："></a>toString方法：</h3><p>//toString —在输出对象的时候自动调用，所有的类都有这个toString，toString的方法是object</p><p>//object的toString是输出这个对象的地址，如果我们不想输出地址，就重写</p><p>//@Override //表示这个方法是重写</p><p>​    </p><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@Override</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">public</span> String <span class="title">toString</span><span class="params">()</span> </span>&#123;<span class="comment">//生成一个重写的toString --输出所有的属性</span></span><br><span class="line"></span><br><span class="line">​<span class="keyword">return</span> <span class="string">"Workers [name="</span> + name + <span class="string">", sex="</span> + sex + <span class="string">", age="</span> + age + <span class="string">"]"</span>;</span><br><span class="line"></span><br><span class="line">​&#125;</span><br></pre></td></tr></table></figure><h3 id="equals方法："><a href="#equals方法：" class="headerlink" title="equals方法："></a>equals方法：</h3><p>//object的方法，用于比较，原生方法为==</p><p>//基本类型用==比较时，比较的是值；而引用类型比较的是地址；</p><p>//重写equals用于判断两个属性是否相等</p><p>//jdk提供的类，几乎都是重写了equals，这些重写的equals都是比较的值</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> java学习笔记 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> extends </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>Class</title>
       <link href="/2020/02/19/Class/"/>
       <url>/2020/02/19/Class/</url>

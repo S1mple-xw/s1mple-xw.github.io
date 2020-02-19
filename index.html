@@ -130,6 +130,69 @@
         
         <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
             <div class="level-left">
+                <time class="level-item has-text-grey" datetime="2020-02-19T09:06:58.000Z">2020-02-19</time>
+                
+                <div class="level-item">
+                <a class="has-link-grey -link" href="/categories/java%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/">java学习笔记</a>
+                </div>
+                
+                
+                <span class="level-item has-text-grey">
+                    
+                    
+                    2 minutes read (About 351 words)
+                </span>
+                
+                
+            </div>
+        </div>
+        
+        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
+            
+                <a class="has-link-black-ter" href="/2020/02/19/Extends/">Extends</a>
+            
+        </h1>
+        <div class="content">
+            <h1 id="2-继承"><a href="#2-继承" class="headerlink" title="2.继承"></a><strong>2.继承</strong></h1><p>​    extends —继承父类非私有的属性和方法</p>
+<p><em>注意点：不能多继承，但是可以多层次继承</em></p>
+<p><strong>super</strong>—指的是父类本身</p>
+<p>a.访问方法：访问当前父类中的方法，使用super.方法();</p>
+<p>b.访问属性：访问当前父类中的属性，super.属性</p>
+<p>c.访问构造方法：调用父类的构造方法，只能写在第一行，super(值)</p>
+<p><em>重写：当父类的方法不满足子类的需求的时候需要重写，只改变方法体</em></p>
+<p>​    <em>（此处区分重载和重写的区别）</em></p>
+<h3 id="toString方法："><a href="#toString方法：" class="headerlink" title="toString方法："></a>toString方法：</h3><p>//toString —在输出对象的时候自动调用，所有的类都有这个toString，toString的方法是object</p>
+<p>//object的toString是输出这个对象的地址，如果我们不想输出地址，就重写</p>
+<p>//@Override //表示这个方法是重写</p>
+<p>​    </p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@Override</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">public</span> String <span class="title">toString</span><span class="params">()</span> </span>&#123;<span class="comment">//生成一个重写的toString --输出所有的属性</span></span><br><span class="line"></span><br><span class="line">​	<span class="keyword">return</span> <span class="string">"Workers [name="</span> + name + <span class="string">", sex="</span> + sex + <span class="string">", age="</span> + age + <span class="string">"]"</span>;</span><br><span class="line"></span><br><span class="line">​	&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="equals方法："><a href="#equals方法：" class="headerlink" title="equals方法："></a>equals方法：</h3><p>//object的方法，用于比较，原生方法为==</p>
+<p>//基本类型用==比较时，比较的是值；而引用类型比较的是地址；</p>
+<p>//重写equals用于判断两个属性是否相等</p>
+<p>//jdk提供的类，几乎都是重写了equals，这些重写的equals都是比较的值</p>
+
+        </div>
+        
+        
+        
+    </div>
+</div>
+
+
+
+
+
+
+
+
+    
+<div class="card">
+    
+    <div class="card-content article ">
+        
+        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
+            <div class="level-left">
                 <time class="level-item has-text-grey" datetime="2020-02-19T08:46:17.000Z">2020-02-19</time>
                 
                 <div class="level-item">
@@ -307,7 +370,7 @@ e.数组有顺序，以下标定义 从0-length-1    </code></pre><h3 id="2-声�
                     </p>
                     <a href="/archives">
                         <p class="title has-text-weight-normal">
-                            2
+                            3
                         </p>
                     </a>
                 </div>
@@ -331,7 +394,7 @@ e.数组有顺序，以下标定义 从0-length-1    </code></pre><h3 id="2-声�
                     </p>
                     <a href="/tags">
                         <p class="title has-text-weight-normal">
-                            3
+                            4
                         </p>
                     </a>
                 </div>
@@ -439,7 +502,7 @@ e.数组有顺序，以下标定义 从0-length-1    </code></pre><h3 id="2-声�
                 <span class="level-item">java学习笔记</span>
             </span>
             <span class="level-end">
-                <span class="level-item tag">2</span>
+                <span class="level-item tag">3</span>
             </span>
         </a></li>
             </ul>
@@ -452,7 +515,7 @@ e.数组有顺序，以下标定义 从0-length-1    </code></pre><h3 id="2-声�
         <h3 class="menu-label">
             Tag Cloud
         </h3>
-        <a href="/tags/Arrays/" style="font-size: 10px;">Arrays</a> <a href="/tags/Class/" style="font-size: 10px;">Class</a> <a href="/tags/Object/" style="font-size: 10px;">Object</a>
+        <a href="/tags/Arrays/" style="font-size: 10px;">Arrays</a> <a href="/tags/Class/" style="font-size: 10px;">Class</a> <a href="/tags/Object/" style="font-size: 10px;">Object</a> <a href="/tags/extends/" style="font-size: 10px;">extends</a>
     </div>
 </div>
     
@@ -464,6 +527,25 @@ e.数组有顺序，以下标定义 从0-length-1    </code></pre><h3 id="2-声�
         <h3 class="menu-label">
             Recent
         </h3>
+        
+        <article class="media">
+            
+            <a href="/2020/02/19/Extends/" class="media-left">
+                <p class="image is-64x64">
+                    <img class="thumbnail" src="/images/thumbnail.svg" alt="Extends">
+                </p>
+            </a>
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2020-02-19T09:06:58.000Z">2020-02-19</time></div>
+                    <a href="/2020/02/19/Extends/" class="title has-link-black-ter is-size-6 has-text-weight-normal">Extends</a>
+                    <p class="is-size-7 is-uppercase">
+                        <a class="has-link-grey -link" href="/categories/java%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/">java学习笔记</a>
+                    </p>
+                </div>
+            </div>
+        </article>
         
         <article class="media">
             
@@ -520,7 +602,7 @@ e.数组有顺序，以下标定义 从0-length-1    </code></pre><h3 id="2-声�
                     <span class="level-item">February 2020</span>
                 </span>
                 <span class="level-end">
-                    <span class="level-item tag">2</span>
+                    <span class="level-item tag">3</span>
                 </span>
             </a>
         </li>
@@ -555,6 +637,13 @@ e.数组有顺序，以下标定义 从0-length-1    </code></pre><h3 id="2-声�
                 <div class="control">
                     <a class="tags has-addons" href="/tags/Object/">
                         <span class="tag">Object</span>
+                        <span class="tag is-grey">1</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/extends/">
+                        <span class="tag">extends</span>
                         <span class="tag is-grey">1</span>
                     </a>
                 </div>
@@ -583,6 +672,25 @@ e.数组有顺序，以下标定义 从0-length-1    </code></pre><h3 id="2-声�
         
         <article class="media">
             
+            <a href="/2020/02/19/Extends/" class="media-left">
+                <p class="image is-64x64">
+                    <img class="thumbnail" src="/images/thumbnail.svg" alt="Extends">
+                </p>
+            </a>
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2020-02-19T09:06:58.000Z">2020-02-19</time></div>
+                    <a href="/2020/02/19/Extends/" class="title has-link-black-ter is-size-6 has-text-weight-normal">Extends</a>
+                    <p class="is-size-7 is-uppercase">
+                        <a class="has-link-grey -link" href="/categories/java%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/">java学习笔记</a>
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+        <article class="media">
+            
             <a href="/2020/02/19/Class/" class="media-left">
                 <p class="image is-64x64">
                     <img class="thumbnail" src="/images/thumbnail.svg" alt="Class">
@@ -636,7 +744,7 @@ e.数组有顺序，以下标定义 从0-length-1    </code></pre><h3 id="2-声�
                     <span class="level-item">February 2020</span>
                 </span>
                 <span class="level-end">
-                    <span class="level-item tag">2</span>
+                    <span class="level-item tag">3</span>
                 </span>
             </a>
         </li>
@@ -671,6 +779,13 @@ e.数组有顺序，以下标定义 从0-length-1    </code></pre><h3 id="2-声�
                 <div class="control">
                     <a class="tags has-addons" href="/tags/Object/">
                         <span class="tag">Object</span>
+                        <span class="tag is-grey">1</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/extends/">
+                        <span class="tag">extends</span>
                         <span class="tag is-grey">1</span>
                     </a>
                 </div>
@@ -718,14 +833,6 @@ e.数组有顺序，以下标定义 从0-length-1    </code></pre><h3 id="2-声�
                     <a class="button is-white is-large" target="_blank" rel="noopener" title="Attribution 4.0 International" href="https://creativecommons.org/licenses/by/4.0/">
                         
                         <i class="fab fa-creative-commons-by"></i>
-                        
-                    </a>
-                </p>
-                
-                <p class="control">
-                    <a class="button is-white is-large" target="_blank" rel="noopener" title="Download on GitHub" href="https://github.com/ppoffice/hexo-theme-icarus">
-                        
-                        <i class="fab fa-github"></i>
                         
                     </a>
                 </p>
