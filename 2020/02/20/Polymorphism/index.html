@@ -7,16 +7,21 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
 
-<title>Tag: Object - CreepCode</title>
+<title>Polymorphism(多态) - CreepCode</title>
 
 
-    <meta property="og:type" content="website">
-<meta property="og:title" content="CreepCode">
-<meta property="og:url" content="http://yoursite.com/tags/Object/index.html">
+    <meta name="description" content="1.多态的语法：有继承和实现的时候（条件）   重写方法    父类的引用  &#x2F;&#x2F;编译过程中不确定具体类型，等待运行后在确定具体类，根据运行是的类型来确定 2.多态就是引用数据类型的一种自动类型转换，向上转型（子类的对象指向父类的引用）例如： Animals am &#x3D; new Dog();     a.多态的情况下，不能调用子类独有的方法（比如子类Dog独有的方法） b.多态的情况下，如果子类方法">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Polymorphism(多态)">
+<meta property="og:url" content="http://yoursite.com/2020/02/20/Polymorphism/index.html">
 <meta property="og:site_name" content="CreepCode">
+<meta property="og:description" content="1.多态的语法：有继承和实现的时候（条件）   重写方法    父类的引用  &#x2F;&#x2F;编译过程中不确定具体类型，等待运行后在确定具体类，根据运行是的类型来确定 2.多态就是引用数据类型的一种自动类型转换，向上转型（子类的对象指向父类的引用）例如： Animals am &#x3D; new Dog();     a.多态的情况下，不能调用子类独有的方法（比如子类Dog独有的方法） b.多态的情况下，如果子类方法">
 <meta property="og:locale" content="en_US">
 <meta property="og:image" content="http://yoursite.com/images/og_image.png">
+<meta property="article:published_time" content="2020-02-20T09:23:30.000Z">
+<meta property="article:modified_time" content="2020-02-20T09:37:47.696Z">
 <meta property="article:author" content="creep">
+<meta property="article:tag" content="java">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="http://yoursite.com/images/og_image.png">
 
@@ -76,7 +81,7 @@
         <div class="navbar-brand is-flex-center">
             <a class="navbar-item navbar-logo" href="/">
             
-                <img src="/images/logo.svg" alt="CreepCode" height="28">
+                <img src="/images/logo.svg" alt="Polymorphism(多态)" height="28">
             
             </a>
         </div>
@@ -122,25 +127,14 @@
     <section class="section">
         <div class="container">
             <div class="columns">
-                <div class="column is-8-tablet is-8-desktop is-6-widescreen has-order-2 column-main"><div class="card">
-    <div class="card-content">
-        <nav class="breadcrumb" aria-label="breadcrumbs">
-        <ul>
-            <li><a href="/tags">Tags</a></li>
-            <li class="is-active"><a href="#" aria-current="page">Object</a></li>
-        </ul>
-        </nav>
-    </div>
-</div>
-
-    
+                <div class="column is-8-tablet is-8-desktop is-6-widescreen has-order-2 column-main">
 <div class="card">
     
     <div class="card-content article ">
         
         <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
             <div class="level-left">
-                <time class="level-item has-text-grey" datetime="2020-02-19T08:46:17.000Z">2020-02-19</time>
+                <time class="level-item has-text-grey" datetime="2020-02-20T09:23:30.000Z">2020-02-20</time>
                 
                 <div class="level-item">
                 <a class="has-link-grey -link" href="/categories/java%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/">java学习笔记</a>
@@ -150,7 +144,7 @@
                 <span class="level-item has-text-grey">
                     
                     
-                    2 minutes read (About 313 words)
+                    3 minutes read (About 417 words)
                 </span>
                 
                 
@@ -159,21 +153,44 @@
         
         <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
             
-                <a class="has-link-black-ter" href="/2020/02/19/Class/">Class(类)</a>
+                Polymorphism(多态)
             
         </h1>
         <div class="content">
-            <h3 id="1-定义类的语法"><a href="#1-定义类的语法" class="headerlink" title="1.定义类的语法"></a><strong>1.定义类的语法</strong></h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> 类名｛</span></span><br><span class="line"><span class="class"></span></span><br><span class="line"><span class="class">//<span class="title">a</span>.属性</span></span><br><span class="line"><span class="class"></span></span><br><span class="line"><span class="class">//<span class="title">b</span>.函数，方法</span></span><br><span class="line"><span class="class"></span></span><br><span class="line"><span class="class">｝</span></span><br><span class="line"><span class="class"></span></span><br><span class="line"><span class="class">//举例</span></span><br><span class="line"><span class="class"></span></span><br><span class="line"><span class="class"><span class="title">public</span> <span class="title">class</span> <span class="title">Dog</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">​	<span class="comment">//属性----成员变量（有默认值）</span></span><br><span class="line"></span><br><span class="line">String color;</span><br><span class="line"></span><br><span class="line">String name;</span><br><span class="line"></span><br><span class="line"><span class="keyword">int</span> age;</span><br><span class="line"></span><br><span class="line">String type;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">eat</span><span class="params">(String food)</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">​	System.out.println(<span class="string">"狗狗在吃："</span>+food);</span><br><span class="line"></span><br><span class="line">&#125;<span class="comment">//加上static 和不加只是调用不同，暂时不加</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">shout</span><span class="params">()</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">​	System.out.println(type+<span class="string">"的狗在大叫"</span>);</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">introduce</span><span class="params">()</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">​	System.out.println(<span class="string">"这只泰迪"</span>+age+<span class="string">"岁了"</span>);</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+            <h4 id="1-多态的语法：有继承和实现的时候（条件）"><a href="#1-多态的语法：有继承和实现的时候（条件）" class="headerlink" title="1.多态的语法：有继承和实现的时候（条件）"></a>1.多态的语法：有继承和实现的时候（条件）</h4><p>   重写方法</p>
+<p>   父类的引用</p>
+<p> //编译过程中不确定具体类型，等待运行后在确定具体类，根据运行是的类型来确定</p>
+<h4 id="2-多态就是引用数据类型的一种自动类型转换，向上转型（子类的对象指向父类的引用）"><a href="#2-多态就是引用数据类型的一种自动类型转换，向上转型（子类的对象指向父类的引用）" class="headerlink" title="2.多态就是引用数据类型的一种自动类型转换，向上转型（子类的对象指向父类的引用）"></a>2.多态就是引用数据类型的一种自动类型转换，向上转型（子类的对象指向父类的引用）</h4><p>例如： Animals am = new Dog();    </p>
+<p>a.多态的情况下，不能调用子类独有的方法（比如子类Dog独有的方法）</p>
+<p>b.多态的情况下，如果子类方法重写了父类的方法，则调用的是子类重写的方法</p>
+<p>c.多态的情况下，调用的只能是父类的属性</p>
+<h4 id="3-多态的作用："><a href="#3-多态的作用：" class="headerlink" title="3.多态的作用："></a>3.多态的作用：</h4><p>a.作为返回值</p>
+<p>b.作为参数</p>
+<h3 id="拓展："><a href="#拓展：" class="headerlink" title="拓展："></a><strong>拓展：</strong></h3><h4 id="内部类：写在类中，或者方法中的类"><a href="#内部类：写在类中，或者方法中的类" class="headerlink" title="内部类：写在类中，或者方法中的类"></a>内部类：写在类中，或者方法中的类</h4><p>1.成员内部类： 把类当作成员，可以使用所有权限修饰符</p>
+<p>可以定义一个比private更小的范围，可以实现一个外部</p>
+<p>类继承1个内部类和继承1个类</p>
+<p>但是不能定义静态属性和方法</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">a</span></span>&#123;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">b</span><span class="params">()</span></span>&#123;</span><br><span class="line"></span><br><span class="line">​    <span class="comment">// c()  ; //错误调用</span></span><br><span class="line"></span><br><span class="line">​     <span class="keyword">new</span> InnerClass().c();  <span class="comment">//正确方法</span></span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">private</span> <span class="class"><span class="keyword">class</span> <span class="title">InnerClass</span></span>&#123;<span class="comment">//属于对象</span></span><br><span class="line"></span><br><span class="line">​       b（）；</span><br><span class="line"></span><br><span class="line">​      <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">c</span><span class="params">()</span></span>&#123;</span><br><span class="line"></span><br><span class="line">​    &#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
-<h3 id="2-定义对象的语法"><a href="#2-定义对象的语法" class="headerlink" title="2.定义对象的语法"></a><strong>2.定义对象的语法</strong></h3><pre><code>类名 变量名 = new 类名（）；</code></pre><p>​    访问属性：对象名.属性名；</p>
-<p>​    访问方法：对象名.方法名；</p>
-<h3 id="3-类和对象在内存中的分析"><a href="#3-类和对象在内存中的分析" class="headerlink" title="3.类和对象在内存中的分析"></a><strong>3.类和对象在内存中的分析</strong></h3><h3 id="4-构造方法"><a href="#4-构造方法" class="headerlink" title="4.构造方法"></a><strong>4.构造方法</strong></h3><p>​        每一个类中都有一个默认的隐藏的构造方法（没有参数）</p>
-<p>​        但是当我们写了有参数的构造方法之后，无参数的构造方法就没了，需要手动添加.              </p>
-<p>​        构造方法的作用：</p>
-<h4 id="a-用来创建对象-new-构造方法（构造器）"><a href="#a-用来创建对象-new-构造方法（构造器）" class="headerlink" title="a.用来创建对象 new+构造方法（构造器）"></a>a.用来创建对象 new+构造方法（构造器）</h4><h4 id="b-初始化成员变量"><a href="#b-初始化成员变量" class="headerlink" title="b.初始化成员变量"></a>b.初始化成员变量</h4><p>例子：</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="title">Dog</span><span class="params">()</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">​		System.out.println(<span class="string">"构造方法"</span>);</span><br><span class="line"></span><br><span class="line">​	&#125;</span><br><span class="line"></span><br><span class="line">​	<span class="comment">//有参构造给成员变量赋值</span></span><br><span class="line"></span><br><span class="line">​	<span class="function"><span class="keyword">public</span> <span class="title">Dog</span><span class="params">(String name,String color,<span class="keyword">int</span> age)</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">​		<span class="keyword">this</span>.name = name ;</span><br><span class="line"></span><br><span class="line">​		<span class="keyword">this</span>.color = color;</span><br><span class="line"></span><br><span class="line">​		<span class="keyword">this</span>.age = age ;</span><br><span class="line"></span><br><span class="line">​	&#125;</span><br></pre></td></tr></table></figure>
+<p>2.静态内部类 ：可以定义静态属性</p>
+<p>3.方法内部类： 也叫匿名内部类</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">interface</span> <span class="title">B</span> </span>&#123;</span><br><span class="line">	<span class="function"><span class="keyword">void</span> <span class="title">eat</span><span class="params">(String food)</span></span>;</span><br><span class="line">	</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//		语法一</span></span><br><span class="line"><span class="comment">//		B b = new B() &#123;</span></span><br><span class="line"><span class="comment">//			</span></span><br><span class="line"><span class="comment">//			@Override</span></span><br><span class="line"><span class="comment">//			public void eat(String food) &#123;</span></span><br><span class="line"><span class="comment">//				// TODO Auto-generated method stub</span></span><br><span class="line"><span class="comment">//				System.out.println("吃"+food);</span></span><br><span class="line"><span class="comment">//			&#125;</span></span><br><span class="line"><span class="comment">//		&#125;;</span></span><br><span class="line"><span class="comment">//		b.eat("肉");</span></span><br></pre></td></tr></table></figure>
 
 
+
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//语法二</span></span><br><span class="line">B b2 = (String food)-&gt;&#123;</span><br><span class="line">	System.out.println(<span class="string">"吃"</span>+food);</span><br><span class="line">&#125;;</span><br><span class="line">b2.eat(<span class="string">"菜"</span>);</span><br></pre></td></tr></table></figure>
+
+        </div>
+        
+        <div class="level is-size-7 is-uppercase">
+            <div class="level-start">
+                <div class="level-item">
+                    <span class="is-size-6 has-text-grey has-mr-7">#</span>
+                    <a class="has-link-grey -link" href="/tags/java/" rel="tag">java</a>
+                </div>
+            </div>
         </div>
         
         
@@ -183,11 +200,53 @@
 
 
 
+<div class="card">
+    <div class="card-content">
+        <h3 class="menu-label has-text-centered">Like this article? Support the author with</h3>
+        <div class="buttons is-centered">
+            
+        </div>
+    </div>
+</div>
 
 
 
+<div class="card card-transparent">
+    <div class="level post-navigation is-flex-wrap is-mobile">
+        
+        
+        <div class="level-end">
+            <a class="level level-item has-link-grey  article-nav-next" href="/2020/02/20/Interface/">
+                <span class="level-item">Interface(接口)</span>
+                <i class="level-item fas fa-chevron-right"></i>
+            </a>
+        </div>
+        
+    </div>
+</div>
 
 
+
+<div class="card">
+    <div class="card-content">
+        <h3 class="title is-5 has-text-weight-normal">Comments</h3>
+        
+<div id="valine-thread" class="content"></div>
+<script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/valine@1.3.10/dist/Valine.min.js"></script>
+<script>
+    new Valine({
+        el: '#valine-thread' ,
+        notify: false,
+        verify: false,
+        app_id: 'qwwcRBlAM8QyWi0u9RQDi4O4-gzGzoHsz',
+        app_key: 'Qal7yogGJtekUyIKjiyfGAFa',
+        placeholder: '留下你的想法...'
+    });
+</script>
+
+    </div>
+</div>
 </div>
                 
 
@@ -229,7 +288,7 @@
                     </p>
                     <a href="/archives">
                         <p class="title has-text-weight-normal">
-                            5
+                            7
                         </p>
                     </a>
                 </div>
@@ -249,11 +308,11 @@
             <div class="level-item has-text-centered is-marginless">
                 <div>
                     <p class="heading">
-                        Tags
+                        Tag
                     </p>
                     <a href="/tags">
                         <p class="title has-text-weight-normal">
-                            6
+                            1
                         </p>
                     </a>
                 </div>
@@ -361,7 +420,7 @@
                 <span class="level-item">java学习笔记</span>
             </span>
             <span class="level-end">
-                <span class="level-item tag">5</span>
+                <span class="level-item tag">7</span>
             </span>
         </a></li>
             </ul>
@@ -374,7 +433,7 @@
         <h3 class="menu-label">
             Tag Cloud
         </h3>
-        <a href="/tags/Arrays/" style="font-size: 10px;">Arrays</a> <a href="/tags/Class/" style="font-size: 10px;">Class</a> <a href="/tags/Encapsulation/" style="font-size: 10px;">Encapsulation</a> <a href="/tags/Object/" style="font-size: 10px;">Object</a> <a href="/tags/abstract/" style="font-size: 10px;">abstract</a> <a href="/tags/extends/" style="font-size: 10px;">extends</a>
+        <a href="/tags/java/" style="font-size: 10px;">java</a>
     </div>
 </div>
     
@@ -386,6 +445,44 @@
         <h3 class="menu-label">
             Recent
         </h3>
+        
+        <article class="media">
+            
+            <a href="/2020/02/20/Polymorphism/" class="media-left">
+                <p class="image is-64x64">
+                    <img class="thumbnail" src="/images/thumbnail.svg" alt="Polymorphism(多态)">
+                </p>
+            </a>
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2020-02-20T09:23:30.000Z">2020-02-20</time></div>
+                    <a href="/2020/02/20/Polymorphism/" class="title has-link-black-ter is-size-6 has-text-weight-normal">Polymorphism(多态)</a>
+                    <p class="is-size-7 is-uppercase">
+                        <a class="has-link-grey -link" href="/categories/java%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/">java学习笔记</a>
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+        <article class="media">
+            
+            <a href="/2020/02/20/Interface/" class="media-left">
+                <p class="image is-64x64">
+                    <img class="thumbnail" src="/images/thumbnail.svg" alt="Interface(接口)">
+                </p>
+            </a>
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2020-02-20T09:16:46.000Z">2020-02-20</time></div>
+                    <a href="/2020/02/20/Interface/" class="title has-link-black-ter is-size-6 has-text-weight-normal">Interface(接口)</a>
+                    <p class="is-size-7 is-uppercase">
+                        <a class="has-link-grey -link" href="/categories/java%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/">java学习笔记</a>
+                    </p>
+                </div>
+            </div>
+        </article>
         
         <article class="media">
             
@@ -444,44 +541,6 @@
             </div>
         </article>
         
-        <article class="media">
-            
-            <a href="/2020/02/19/Class/" class="media-left">
-                <p class="image is-64x64">
-                    <img class="thumbnail" src="/images/thumbnail.svg" alt="Class(类)">
-                </p>
-            </a>
-            
-            <div class="media-content">
-                <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2020-02-19T08:46:17.000Z">2020-02-19</time></div>
-                    <a href="/2020/02/19/Class/" class="title has-link-black-ter is-size-6 has-text-weight-normal">Class(类)</a>
-                    <p class="is-size-7 is-uppercase">
-                        <a class="has-link-grey -link" href="/categories/java%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/">java学习笔记</a>
-                    </p>
-                </div>
-            </div>
-        </article>
-        
-        <article class="media">
-            
-            <a href="/2020/02/19/Array/" class="media-left">
-                <p class="image is-64x64">
-                    <img class="thumbnail" src="/images/thumbnail.svg" alt="Array(数组)">
-                </p>
-            </a>
-            
-            <div class="media-content">
-                <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2020-02-19T08:26:37.000Z">2020-02-19</time></div>
-                    <a href="/2020/02/19/Array/" class="title has-link-black-ter is-size-6 has-text-weight-normal">Array(数组)</a>
-                    <p class="is-size-7 is-uppercase">
-                        <a class="has-link-grey -link" href="/categories/java%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/">java学习笔记</a>
-                    </p>
-                </div>
-            </div>
-        </article>
-        
     </div>
 </div>
         
@@ -499,7 +558,7 @@
                     <span class="level-item">February 2020</span>
                 </span>
                 <span class="level-end">
-                    <span class="level-item tag">5</span>
+                    <span class="level-item tag">7</span>
                 </span>
             </a>
         </li>
@@ -518,44 +577,9 @@
             <div class="field is-grouped is-grouped-multiline">
                 
                 <div class="control">
-                    <a class="tags has-addons" href="/tags/Arrays/">
-                        <span class="tag">Arrays</span>
-                        <span class="tag is-grey">1</span>
-                    </a>
-                </div>
-                
-                <div class="control">
-                    <a class="tags has-addons" href="/tags/Class/">
-                        <span class="tag">Class</span>
-                        <span class="tag is-grey">1</span>
-                    </a>
-                </div>
-                
-                <div class="control">
-                    <a class="tags has-addons" href="/tags/Encapsulation/">
-                        <span class="tag">Encapsulation</span>
-                        <span class="tag is-grey">1</span>
-                    </a>
-                </div>
-                
-                <div class="control">
-                    <a class="tags has-addons" href="/tags/Object/">
-                        <span class="tag">Object</span>
-                        <span class="tag is-grey">1</span>
-                    </a>
-                </div>
-                
-                <div class="control">
-                    <a class="tags has-addons" href="/tags/abstract/">
-                        <span class="tag">abstract</span>
-                        <span class="tag is-grey">1</span>
-                    </a>
-                </div>
-                
-                <div class="control">
-                    <a class="tags has-addons" href="/tags/extends/">
-                        <span class="tag">extends</span>
-                        <span class="tag is-grey">1</span>
+                    <a class="tags has-addons" href="/tags/java/">
+                        <span class="tag">java</span>
+                        <span class="tag is-grey">7</span>
                     </a>
                 </div>
                 
@@ -583,6 +607,44 @@
         
         <article class="media">
             
+            <a href="/2020/02/20/Polymorphism/" class="media-left">
+                <p class="image is-64x64">
+                    <img class="thumbnail" src="/images/thumbnail.svg" alt="Polymorphism(多态)">
+                </p>
+            </a>
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2020-02-20T09:23:30.000Z">2020-02-20</time></div>
+                    <a href="/2020/02/20/Polymorphism/" class="title has-link-black-ter is-size-6 has-text-weight-normal">Polymorphism(多态)</a>
+                    <p class="is-size-7 is-uppercase">
+                        <a class="has-link-grey -link" href="/categories/java%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/">java学习笔记</a>
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+        <article class="media">
+            
+            <a href="/2020/02/20/Interface/" class="media-left">
+                <p class="image is-64x64">
+                    <img class="thumbnail" src="/images/thumbnail.svg" alt="Interface(接口)">
+                </p>
+            </a>
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2020-02-20T09:16:46.000Z">2020-02-20</time></div>
+                    <a href="/2020/02/20/Interface/" class="title has-link-black-ter is-size-6 has-text-weight-normal">Interface(接口)</a>
+                    <p class="is-size-7 is-uppercase">
+                        <a class="has-link-grey -link" href="/categories/java%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/">java学习笔记</a>
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+        <article class="media">
+            
             <a href="/2020/02/19/Abstract/" class="media-left">
                 <p class="image is-64x64">
                     <img class="thumbnail" src="/images/thumbnail.svg" alt="Abstract(抽象)">
@@ -638,44 +700,6 @@
             </div>
         </article>
         
-        <article class="media">
-            
-            <a href="/2020/02/19/Class/" class="media-left">
-                <p class="image is-64x64">
-                    <img class="thumbnail" src="/images/thumbnail.svg" alt="Class(类)">
-                </p>
-            </a>
-            
-            <div class="media-content">
-                <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2020-02-19T08:46:17.000Z">2020-02-19</time></div>
-                    <a href="/2020/02/19/Class/" class="title has-link-black-ter is-size-6 has-text-weight-normal">Class(类)</a>
-                    <p class="is-size-7 is-uppercase">
-                        <a class="has-link-grey -link" href="/categories/java%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/">java学习笔记</a>
-                    </p>
-                </div>
-            </div>
-        </article>
-        
-        <article class="media">
-            
-            <a href="/2020/02/19/Array/" class="media-left">
-                <p class="image is-64x64">
-                    <img class="thumbnail" src="/images/thumbnail.svg" alt="Array(数组)">
-                </p>
-            </a>
-            
-            <div class="media-content">
-                <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2020-02-19T08:26:37.000Z">2020-02-19</time></div>
-                    <a href="/2020/02/19/Array/" class="title has-link-black-ter is-size-6 has-text-weight-normal">Array(数组)</a>
-                    <p class="is-size-7 is-uppercase">
-                        <a class="has-link-grey -link" href="/categories/java%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/">java学习笔记</a>
-                    </p>
-                </div>
-            </div>
-        </article>
-        
     </div>
 </div>
     
@@ -693,7 +717,7 @@
                     <span class="level-item">February 2020</span>
                 </span>
                 <span class="level-end">
-                    <span class="level-item tag">5</span>
+                    <span class="level-item tag">7</span>
                 </span>
             </a>
         </li>
@@ -712,44 +736,9 @@
             <div class="field is-grouped is-grouped-multiline">
                 
                 <div class="control">
-                    <a class="tags has-addons" href="/tags/Arrays/">
-                        <span class="tag">Arrays</span>
-                        <span class="tag is-grey">1</span>
-                    </a>
-                </div>
-                
-                <div class="control">
-                    <a class="tags has-addons" href="/tags/Class/">
-                        <span class="tag">Class</span>
-                        <span class="tag is-grey">1</span>
-                    </a>
-                </div>
-                
-                <div class="control">
-                    <a class="tags has-addons" href="/tags/Encapsulation/">
-                        <span class="tag">Encapsulation</span>
-                        <span class="tag is-grey">1</span>
-                    </a>
-                </div>
-                
-                <div class="control">
-                    <a class="tags has-addons" href="/tags/Object/">
-                        <span class="tag">Object</span>
-                        <span class="tag is-grey">1</span>
-                    </a>
-                </div>
-                
-                <div class="control">
-                    <a class="tags has-addons" href="/tags/abstract/">
-                        <span class="tag">abstract</span>
-                        <span class="tag is-grey">1</span>
-                    </a>
-                </div>
-                
-                <div class="control">
-                    <a class="tags has-addons" href="/tags/extends/">
-                        <span class="tag">extends</span>
-                        <span class="tag is-grey">1</span>
+                    <a class="tags has-addons" href="/tags/java/">
+                        <span class="tag">java</span>
+                        <span class="tag is-grey">7</span>
                     </a>
                 </div>
                 
@@ -770,7 +759,7 @@
             <div class="level-start has-text-centered-mobile">
                 <a class="footer-logo is-block has-mb-6" href="/">
                 
-                    <img src="/images/logo.svg" alt="CreepCode" height="28">
+                    <img src="/images/logo.svg" alt="Polymorphism(多态)" height="28">
                 
                 </a>
                 <p class="is-size-7">

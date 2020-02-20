@@ -130,6 +130,130 @@
         
         <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
             <div class="level-left">
+                <time class="level-item has-text-grey" datetime="2020-02-20T09:23:30.000Z">2020-02-20</time>
+                
+                <div class="level-item">
+                <a class="has-link-grey -link" href="/categories/java%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/">java学习笔记</a>
+                </div>
+                
+                
+                <span class="level-item has-text-grey">
+                    
+                    
+                    3 minutes read (About 417 words)
+                </span>
+                
+                
+            </div>
+        </div>
+        
+        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
+            
+                <a class="has-link-black-ter" href="/2020/02/20/Polymorphism/">Polymorphism(多态)</a>
+            
+        </h1>
+        <div class="content">
+            <h4 id="1-多态的语法：有继承和实现的时候（条件）"><a href="#1-多态的语法：有继承和实现的时候（条件）" class="headerlink" title="1.多态的语法：有继承和实现的时候（条件）"></a>1.多态的语法：有继承和实现的时候（条件）</h4><p>   重写方法</p>
+<p>   父类的引用</p>
+<p> //编译过程中不确定具体类型，等待运行后在确定具体类，根据运行是的类型来确定</p>
+<h4 id="2-多态就是引用数据类型的一种自动类型转换，向上转型（子类的对象指向父类的引用）"><a href="#2-多态就是引用数据类型的一种自动类型转换，向上转型（子类的对象指向父类的引用）" class="headerlink" title="2.多态就是引用数据类型的一种自动类型转换，向上转型（子类的对象指向父类的引用）"></a>2.多态就是引用数据类型的一种自动类型转换，向上转型（子类的对象指向父类的引用）</h4><p>例如： Animals am = new Dog();    </p>
+<p>a.多态的情况下，不能调用子类独有的方法（比如子类Dog独有的方法）</p>
+<p>b.多态的情况下，如果子类方法重写了父类的方法，则调用的是子类重写的方法</p>
+<p>c.多态的情况下，调用的只能是父类的属性</p>
+<h4 id="3-多态的作用："><a href="#3-多态的作用：" class="headerlink" title="3.多态的作用："></a>3.多态的作用：</h4><p>a.作为返回值</p>
+<p>b.作为参数</p>
+<h3 id="拓展："><a href="#拓展：" class="headerlink" title="拓展："></a><strong>拓展：</strong></h3><h4 id="内部类：写在类中，或者方法中的类"><a href="#内部类：写在类中，或者方法中的类" class="headerlink" title="内部类：写在类中，或者方法中的类"></a>内部类：写在类中，或者方法中的类</h4><p>1.成员内部类： 把类当作成员，可以使用所有权限修饰符</p>
+<p>可以定义一个比private更小的范围，可以实现一个外部</p>
+<p>类继承1个内部类和继承1个类</p>
+<p>但是不能定义静态属性和方法</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">a</span></span>&#123;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">b</span><span class="params">()</span></span>&#123;</span><br><span class="line"></span><br><span class="line">​    <span class="comment">// c()  ; //错误调用</span></span><br><span class="line"></span><br><span class="line">​     <span class="keyword">new</span> InnerClass().c();  <span class="comment">//正确方法</span></span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">private</span> <span class="class"><span class="keyword">class</span> <span class="title">InnerClass</span></span>&#123;<span class="comment">//属于对象</span></span><br><span class="line"></span><br><span class="line">​       b（）；</span><br><span class="line"></span><br><span class="line">​      <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">c</span><span class="params">()</span></span>&#123;</span><br><span class="line"></span><br><span class="line">​    &#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>2.静态内部类 ：可以定义静态属性</p>
+<p>3.方法内部类： 也叫匿名内部类</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">interface</span> <span class="title">B</span> </span>&#123;</span><br><span class="line">	<span class="function"><span class="keyword">void</span> <span class="title">eat</span><span class="params">(String food)</span></span>;</span><br><span class="line">	</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//		语法一</span></span><br><span class="line"><span class="comment">//		B b = new B() &#123;</span></span><br><span class="line"><span class="comment">//			</span></span><br><span class="line"><span class="comment">//			@Override</span></span><br><span class="line"><span class="comment">//			public void eat(String food) &#123;</span></span><br><span class="line"><span class="comment">//				// TODO Auto-generated method stub</span></span><br><span class="line"><span class="comment">//				System.out.println("吃"+food);</span></span><br><span class="line"><span class="comment">//			&#125;</span></span><br><span class="line"><span class="comment">//		&#125;;</span></span><br><span class="line"><span class="comment">//		b.eat("肉");</span></span><br></pre></td></tr></table></figure>
+
+
+
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//语法二</span></span><br><span class="line">B b2 = (String food)-&gt;&#123;</span><br><span class="line">	System.out.println(<span class="string">"吃"</span>+food);</span><br><span class="line">&#125;;</span><br><span class="line">b2.eat(<span class="string">"菜"</span>);</span><br></pre></td></tr></table></figure>
+
+        </div>
+        
+        
+        
+    </div>
+</div>
+
+
+
+
+
+
+
+
+    
+<div class="card">
+    
+    <div class="card-content article ">
+        
+        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
+            <div class="level-left">
+                <time class="level-item has-text-grey" datetime="2020-02-20T09:16:46.000Z">2020-02-20</time>
+                
+                <div class="level-item">
+                <a class="has-link-grey -link" href="/categories/java%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/">java学习笔记</a>
+                </div>
+                
+                
+                <span class="level-item has-text-grey">
+                    
+                    
+                    a minute read (About 215 words)
+                </span>
+                
+                
+            </div>
+        </div>
+        
+        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
+            
+                <a class="has-link-black-ter" href="/2020/02/20/Interface/">Interface(接口)</a>
+            
+        </h1>
+        <div class="content">
+            <p><strong>1.定义</strong></p>
+<p>a.接口中只能定义常量和抽象方法，不能定义变量—-自动加上public static final </p>
+<p>b.可以定义static修饰的普通方法，不能定义非静态（非static）的普通方法</p>
+<p>​    例如  static void c(){}(会自动加上public)      例如  public void c(){}</p>
+<p>c.可以定义抽象方法—–会自动加上public abstract 例如  void b(){}</p>
+<p>d.不能定义构造方法，不能创建对象</p>
+<p>​    接口的子类和子口的关系叫做实现    implements</p>
+<p>​    子类实现接口的抽象方法，会具有接口的常量和抽象方法</p>
+<p>​    但是子类不会继承父类（接口）的static修饰的普通方法</p>
+<p>​    需要通过接口名.方法名（）访问</p>
+<h5 id="接口的多实现，接口和接口之间可以多继承"><a href="#接口的多实现，接口和接口之间可以多继承" class="headerlink" title="接口的多实现，接口和接口之间可以多继承"></a><em>接口的多实现，接口和接口之间可以多继承</em></h5>
+        </div>
+        
+        
+        
+    </div>
+</div>
+
+
+
+
+
+
+
+
+    
+<div class="card">
+    
+    <div class="card-content article ">
+        
+        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
+            <div class="level-left">
                 <time class="level-item has-text-grey" datetime="2020-02-19T09:27:00.000Z">2020-02-19</time>
                 
                 <div class="level-item">
@@ -511,7 +635,7 @@ e.数组有顺序，以下标定义 从0-length-1    </code></pre><h3 id="2-声�
                     </p>
                     <a href="/archives">
                         <p class="title has-text-weight-normal">
-                            5
+                            7
                         </p>
                     </a>
                 </div>
@@ -531,11 +655,11 @@ e.数组有顺序，以下标定义 从0-length-1    </code></pre><h3 id="2-声�
             <div class="level-item has-text-centered is-marginless">
                 <div>
                     <p class="heading">
-                        Tags
+                        Tag
                     </p>
                     <a href="/tags">
                         <p class="title has-text-weight-normal">
-                            6
+                            1
                         </p>
                     </a>
                 </div>
@@ -643,7 +767,7 @@ e.数组有顺序，以下标定义 从0-length-1    </code></pre><h3 id="2-声�
                 <span class="level-item">java学习笔记</span>
             </span>
             <span class="level-end">
-                <span class="level-item tag">5</span>
+                <span class="level-item tag">7</span>
             </span>
         </a></li>
             </ul>
@@ -656,7 +780,7 @@ e.数组有顺序，以下标定义 从0-length-1    </code></pre><h3 id="2-声�
         <h3 class="menu-label">
             Tag Cloud
         </h3>
-        <a href="/tags/Arrays/" style="font-size: 10px;">Arrays</a> <a href="/tags/Class/" style="font-size: 10px;">Class</a> <a href="/tags/Encapsulation/" style="font-size: 10px;">Encapsulation</a> <a href="/tags/Object/" style="font-size: 10px;">Object</a> <a href="/tags/abstract/" style="font-size: 10px;">abstract</a> <a href="/tags/extends/" style="font-size: 10px;">extends</a>
+        <a href="/tags/java/" style="font-size: 10px;">java</a>
     </div>
 </div>
     
@@ -668,6 +792,44 @@ e.数组有顺序，以下标定义 从0-length-1    </code></pre><h3 id="2-声�
         <h3 class="menu-label">
             Recent
         </h3>
+        
+        <article class="media">
+            
+            <a href="/2020/02/20/Polymorphism/" class="media-left">
+                <p class="image is-64x64">
+                    <img class="thumbnail" src="/images/thumbnail.svg" alt="Polymorphism(多态)">
+                </p>
+            </a>
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2020-02-20T09:23:30.000Z">2020-02-20</time></div>
+                    <a href="/2020/02/20/Polymorphism/" class="title has-link-black-ter is-size-6 has-text-weight-normal">Polymorphism(多态)</a>
+                    <p class="is-size-7 is-uppercase">
+                        <a class="has-link-grey -link" href="/categories/java%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/">java学习笔记</a>
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+        <article class="media">
+            
+            <a href="/2020/02/20/Interface/" class="media-left">
+                <p class="image is-64x64">
+                    <img class="thumbnail" src="/images/thumbnail.svg" alt="Interface(接口)">
+                </p>
+            </a>
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2020-02-20T09:16:46.000Z">2020-02-20</time></div>
+                    <a href="/2020/02/20/Interface/" class="title has-link-black-ter is-size-6 has-text-weight-normal">Interface(接口)</a>
+                    <p class="is-size-7 is-uppercase">
+                        <a class="has-link-grey -link" href="/categories/java%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/">java学习笔记</a>
+                    </p>
+                </div>
+            </div>
+        </article>
         
         <article class="media">
             
@@ -726,44 +888,6 @@ e.数组有顺序，以下标定义 从0-length-1    </code></pre><h3 id="2-声�
             </div>
         </article>
         
-        <article class="media">
-            
-            <a href="/2020/02/19/Class/" class="media-left">
-                <p class="image is-64x64">
-                    <img class="thumbnail" src="/images/thumbnail.svg" alt="Class(类)">
-                </p>
-            </a>
-            
-            <div class="media-content">
-                <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2020-02-19T08:46:17.000Z">2020-02-19</time></div>
-                    <a href="/2020/02/19/Class/" class="title has-link-black-ter is-size-6 has-text-weight-normal">Class(类)</a>
-                    <p class="is-size-7 is-uppercase">
-                        <a class="has-link-grey -link" href="/categories/java%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/">java学习笔记</a>
-                    </p>
-                </div>
-            </div>
-        </article>
-        
-        <article class="media">
-            
-            <a href="/2020/02/19/Array/" class="media-left">
-                <p class="image is-64x64">
-                    <img class="thumbnail" src="/images/thumbnail.svg" alt="Array(数组)">
-                </p>
-            </a>
-            
-            <div class="media-content">
-                <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2020-02-19T08:26:37.000Z">2020-02-19</time></div>
-                    <a href="/2020/02/19/Array/" class="title has-link-black-ter is-size-6 has-text-weight-normal">Array(数组)</a>
-                    <p class="is-size-7 is-uppercase">
-                        <a class="has-link-grey -link" href="/categories/java%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/">java学习笔记</a>
-                    </p>
-                </div>
-            </div>
-        </article>
-        
     </div>
 </div>
         
@@ -781,7 +905,7 @@ e.数组有顺序，以下标定义 从0-length-1    </code></pre><h3 id="2-声�
                     <span class="level-item">February 2020</span>
                 </span>
                 <span class="level-end">
-                    <span class="level-item tag">5</span>
+                    <span class="level-item tag">7</span>
                 </span>
             </a>
         </li>
@@ -800,44 +924,9 @@ e.数组有顺序，以下标定义 从0-length-1    </code></pre><h3 id="2-声�
             <div class="field is-grouped is-grouped-multiline">
                 
                 <div class="control">
-                    <a class="tags has-addons" href="/tags/Arrays/">
-                        <span class="tag">Arrays</span>
-                        <span class="tag is-grey">1</span>
-                    </a>
-                </div>
-                
-                <div class="control">
-                    <a class="tags has-addons" href="/tags/Class/">
-                        <span class="tag">Class</span>
-                        <span class="tag is-grey">1</span>
-                    </a>
-                </div>
-                
-                <div class="control">
-                    <a class="tags has-addons" href="/tags/Encapsulation/">
-                        <span class="tag">Encapsulation</span>
-                        <span class="tag is-grey">1</span>
-                    </a>
-                </div>
-                
-                <div class="control">
-                    <a class="tags has-addons" href="/tags/Object/">
-                        <span class="tag">Object</span>
-                        <span class="tag is-grey">1</span>
-                    </a>
-                </div>
-                
-                <div class="control">
-                    <a class="tags has-addons" href="/tags/abstract/">
-                        <span class="tag">abstract</span>
-                        <span class="tag is-grey">1</span>
-                    </a>
-                </div>
-                
-                <div class="control">
-                    <a class="tags has-addons" href="/tags/extends/">
-                        <span class="tag">extends</span>
-                        <span class="tag is-grey">1</span>
+                    <a class="tags has-addons" href="/tags/java/">
+                        <span class="tag">java</span>
+                        <span class="tag is-grey">7</span>
                     </a>
                 </div>
                 
@@ -865,6 +954,44 @@ e.数组有顺序，以下标定义 从0-length-1    </code></pre><h3 id="2-声�
         
         <article class="media">
             
+            <a href="/2020/02/20/Polymorphism/" class="media-left">
+                <p class="image is-64x64">
+                    <img class="thumbnail" src="/images/thumbnail.svg" alt="Polymorphism(多态)">
+                </p>
+            </a>
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2020-02-20T09:23:30.000Z">2020-02-20</time></div>
+                    <a href="/2020/02/20/Polymorphism/" class="title has-link-black-ter is-size-6 has-text-weight-normal">Polymorphism(多态)</a>
+                    <p class="is-size-7 is-uppercase">
+                        <a class="has-link-grey -link" href="/categories/java%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/">java学习笔记</a>
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+        <article class="media">
+            
+            <a href="/2020/02/20/Interface/" class="media-left">
+                <p class="image is-64x64">
+                    <img class="thumbnail" src="/images/thumbnail.svg" alt="Interface(接口)">
+                </p>
+            </a>
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2020-02-20T09:16:46.000Z">2020-02-20</time></div>
+                    <a href="/2020/02/20/Interface/" class="title has-link-black-ter is-size-6 has-text-weight-normal">Interface(接口)</a>
+                    <p class="is-size-7 is-uppercase">
+                        <a class="has-link-grey -link" href="/categories/java%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/">java学习笔记</a>
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+        <article class="media">
+            
             <a href="/2020/02/19/Abstract/" class="media-left">
                 <p class="image is-64x64">
                     <img class="thumbnail" src="/images/thumbnail.svg" alt="Abstract(抽象)">
@@ -920,44 +1047,6 @@ e.数组有顺序，以下标定义 从0-length-1    </code></pre><h3 id="2-声�
             </div>
         </article>
         
-        <article class="media">
-            
-            <a href="/2020/02/19/Class/" class="media-left">
-                <p class="image is-64x64">
-                    <img class="thumbnail" src="/images/thumbnail.svg" alt="Class(类)">
-                </p>
-            </a>
-            
-            <div class="media-content">
-                <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2020-02-19T08:46:17.000Z">2020-02-19</time></div>
-                    <a href="/2020/02/19/Class/" class="title has-link-black-ter is-size-6 has-text-weight-normal">Class(类)</a>
-                    <p class="is-size-7 is-uppercase">
-                        <a class="has-link-grey -link" href="/categories/java%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/">java学习笔记</a>
-                    </p>
-                </div>
-            </div>
-        </article>
-        
-        <article class="media">
-            
-            <a href="/2020/02/19/Array/" class="media-left">
-                <p class="image is-64x64">
-                    <img class="thumbnail" src="/images/thumbnail.svg" alt="Array(数组)">
-                </p>
-            </a>
-            
-            <div class="media-content">
-                <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2020-02-19T08:26:37.000Z">2020-02-19</time></div>
-                    <a href="/2020/02/19/Array/" class="title has-link-black-ter is-size-6 has-text-weight-normal">Array(数组)</a>
-                    <p class="is-size-7 is-uppercase">
-                        <a class="has-link-grey -link" href="/categories/java%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/">java学习笔记</a>
-                    </p>
-                </div>
-            </div>
-        </article>
-        
     </div>
 </div>
     
@@ -975,7 +1064,7 @@ e.数组有顺序，以下标定义 从0-length-1    </code></pre><h3 id="2-声�
                     <span class="level-item">February 2020</span>
                 </span>
                 <span class="level-end">
-                    <span class="level-item tag">5</span>
+                    <span class="level-item tag">7</span>
                 </span>
             </a>
         </li>
@@ -994,44 +1083,9 @@ e.数组有顺序，以下标定义 从0-length-1    </code></pre><h3 id="2-声�
             <div class="field is-grouped is-grouped-multiline">
                 
                 <div class="control">
-                    <a class="tags has-addons" href="/tags/Arrays/">
-                        <span class="tag">Arrays</span>
-                        <span class="tag is-grey">1</span>
-                    </a>
-                </div>
-                
-                <div class="control">
-                    <a class="tags has-addons" href="/tags/Class/">
-                        <span class="tag">Class</span>
-                        <span class="tag is-grey">1</span>
-                    </a>
-                </div>
-                
-                <div class="control">
-                    <a class="tags has-addons" href="/tags/Encapsulation/">
-                        <span class="tag">Encapsulation</span>
-                        <span class="tag is-grey">1</span>
-                    </a>
-                </div>
-                
-                <div class="control">
-                    <a class="tags has-addons" href="/tags/Object/">
-                        <span class="tag">Object</span>
-                        <span class="tag is-grey">1</span>
-                    </a>
-                </div>
-                
-                <div class="control">
-                    <a class="tags has-addons" href="/tags/abstract/">
-                        <span class="tag">abstract</span>
-                        <span class="tag is-grey">1</span>
-                    </a>
-                </div>
-                
-                <div class="control">
-                    <a class="tags has-addons" href="/tags/extends/">
-                        <span class="tag">extends</span>
-                        <span class="tag is-grey">1</span>
+                    <a class="tags has-addons" href="/tags/java/">
+                        <span class="tag">java</span>
+                        <span class="tag is-grey">7</span>
                     </a>
                 </div>
                 

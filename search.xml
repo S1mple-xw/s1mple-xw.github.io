@@ -4,6 +4,56 @@
   
     
     <entry>
+      <title>Polymorphism(多态)</title>
+      <link href="/2020/02/20/Polymorphism/"/>
+      <url>/2020/02/20/Polymorphism/</url>
+      
+        <content type="html"><![CDATA[<h4 id="1-多态的语法：有继承和实现的时候（条件）"><a href="#1-多态的语法：有继承和实现的时候（条件）" class="headerlink" title="1.多态的语法：有继承和实现的时候（条件）"></a>1.多态的语法：有继承和实现的时候（条件）</h4><p>   重写方法</p><p>   父类的引用</p><p> //编译过程中不确定具体类型，等待运行后在确定具体类，根据运行是的类型来确定</p><h4 id="2-多态就是引用数据类型的一种自动类型转换，向上转型（子类的对象指向父类的引用）"><a href="#2-多态就是引用数据类型的一种自动类型转换，向上转型（子类的对象指向父类的引用）" class="headerlink" title="2.多态就是引用数据类型的一种自动类型转换，向上转型（子类的对象指向父类的引用）"></a>2.多态就是引用数据类型的一种自动类型转换，向上转型（子类的对象指向父类的引用）</h4><p>例如： Animals am = new Dog();    </p><p>a.多态的情况下，不能调用子类独有的方法（比如子类Dog独有的方法）</p><p>b.多态的情况下，如果子类方法重写了父类的方法，则调用的是子类重写的方法</p><p>c.多态的情况下，调用的只能是父类的属性</p><h4 id="3-多态的作用："><a href="#3-多态的作用：" class="headerlink" title="3.多态的作用："></a>3.多态的作用：</h4><p>a.作为返回值</p><p>b.作为参数</p><h3 id="拓展："><a href="#拓展：" class="headerlink" title="拓展："></a><strong>拓展：</strong></h3><h4 id="内部类：写在类中，或者方法中的类"><a href="#内部类：写在类中，或者方法中的类" class="headerlink" title="内部类：写在类中，或者方法中的类"></a>内部类：写在类中，或者方法中的类</h4><p>1.成员内部类： 把类当作成员，可以使用所有权限修饰符</p><p>可以定义一个比private更小的范围，可以实现一个外部</p><p>类继承1个内部类和继承1个类</p><p>但是不能定义静态属性和方法</p><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">a</span></span>&#123;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">b</span><span class="params">()</span></span>&#123;</span><br><span class="line"></span><br><span class="line">​    <span class="comment">// c()  ; //错误调用</span></span><br><span class="line"></span><br><span class="line">​     <span class="keyword">new</span> InnerClass().c();  <span class="comment">//正确方法</span></span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">private</span> <span class="class"><span class="keyword">class</span> <span class="title">InnerClass</span></span>&#123;<span class="comment">//属于对象</span></span><br><span class="line"></span><br><span class="line">​       b（）；</span><br><span class="line"></span><br><span class="line">​      <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">c</span><span class="params">()</span></span>&#123;</span><br><span class="line"></span><br><span class="line">​    &#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><p>2.静态内部类 ：可以定义静态属性</p><p>3.方法内部类： 也叫匿名内部类</p><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">interface</span> <span class="title">B</span> </span>&#123;</span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">eat</span><span class="params">(String food)</span></span>;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//语法一</span></span><br><span class="line"><span class="comment">//B b = new B() &#123;</span></span><br><span class="line"><span class="comment">//</span></span><br><span class="line"><span class="comment">//@Override</span></span><br><span class="line"><span class="comment">//public void eat(String food) &#123;</span></span><br><span class="line"><span class="comment">//// TODO Auto-generated method stub</span></span><br><span class="line"><span class="comment">//System.out.println("吃"+food);</span></span><br><span class="line"><span class="comment">//&#125;</span></span><br><span class="line"><span class="comment">//&#125;;</span></span><br><span class="line"><span class="comment">//b.eat("肉");</span></span><br></pre></td></tr></table></figure><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//语法二</span></span><br><span class="line">B b2 = (String food)-&gt;&#123;</span><br><span class="line">System.out.println(<span class="string">"吃"</span>+food);</span><br><span class="line">&#125;;</span><br><span class="line">b2.eat(<span class="string">"菜"</span>);</span><br></pre></td></tr></table></figure>]]></content>
+      
+      
+      <categories>
+          
+          <category> java学习笔记 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> java </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>Interface(接口)</title>
+      <link href="/2020/02/20/Interface/"/>
+      <url>/2020/02/20/Interface/</url>
+      
+        <content type="html"><![CDATA[<p><strong>1.定义</strong></p><p>a.接口中只能定义常量和抽象方法，不能定义变量—-自动加上public static final </p><p>b.可以定义static修饰的普通方法，不能定义非静态（非static）的普通方法</p><p>​    例如  static void c(){}(会自动加上public)      例如  public void c(){}</p><p>c.可以定义抽象方法—–会自动加上public abstract 例如  void b(){}</p><p>d.不能定义构造方法，不能创建对象</p><p>​    接口的子类和子口的关系叫做实现    implements</p><p>​    子类实现接口的抽象方法，会具有接口的常量和抽象方法</p><p>​    但是子类不会继承父类（接口）的static修饰的普通方法</p><p>​    需要通过接口名.方法名（）访问</p><h5 id="接口的多实现，接口和接口之间可以多继承"><a href="#接口的多实现，接口和接口之间可以多继承" class="headerlink" title="接口的多实现，接口和接口之间可以多继承"></a><em>接口的多实现，接口和接口之间可以多继承</em></h5>]]></content>
+      
+      
+      <categories>
+          
+          <category> java学习笔记 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> java </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>Abstract(抽象)</title>
       <link href="/2020/02/19/Abstract/"/>
       <url>/2020/02/19/Abstract/</url>
@@ -20,7 +70,7 @@
       
         <tags>
             
-            <tag> abstract </tag>
+            <tag> java </tag>
             
         </tags>
       
@@ -45,7 +95,7 @@
       
         <tags>
             
-            <tag> Encapsulation </tag>
+            <tag> java </tag>
             
         </tags>
       
@@ -70,7 +120,7 @@
       
         <tags>
             
-            <tag> extends </tag>
+            <tag> java </tag>
             
         </tags>
       
@@ -95,9 +145,7 @@
       
         <tags>
             
-            <tag> Object </tag>
-            
-            <tag> Class </tag>
+            <tag> java </tag>
             
         </tags>
       
@@ -122,7 +170,7 @@
       
         <tags>
             
-            <tag> Arrays </tag>
+            <tag> java </tag>
             
         </tags>
       
