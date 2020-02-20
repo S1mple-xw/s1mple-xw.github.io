@@ -7,19 +7,19 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
 
-<title>Extends(继承) - CreepCode</title>
+<title>3层架构 - CreepCode</title>
 
 
-    <meta name="description" content="extends —继承父类非私有的属性和方法 注意点：不能多继承，但是可以多层次继承 super—指的是父类本身 a.访问方法：访问当前父类中的方法，使用super.方法(); b.访问属性：访问当前父类中的属性，super.属性 c.访问构造方法：调用父类的构造方法，只能写在第一行，super(值) 重写：当父类的方法不满足子类的需求的时候需要重写，只改变方法体 ​    （此处区分重载和重写的">
+    <meta name="description" content="概念：根据功能不同，把所有内容分成3个模块1.界面层(User Interface layer)：放所有关于界面的功能的类  2.逻辑层( Business Logic Layer )：格局业务逻辑，拿到的数据不呢个直接使用，需要进行到dao层处理  3.数据层( Data access layer )：存储数据，获取真实对数据操作​        &#x2F;&#x2F;层与层之间传递参数以及返回数据都是使用对象调">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Extends(继承)">
-<meta property="og:url" content="http://yoursite.com/2020/02/19/Extends/index.html">
+<meta property="og:title" content="3层架构">
+<meta property="og:url" content="http://yoursite.com/2020/02/20/Architecture/index.html">
 <meta property="og:site_name" content="CreepCode">
-<meta property="og:description" content="extends —继承父类非私有的属性和方法 注意点：不能多继承，但是可以多层次继承 super—指的是父类本身 a.访问方法：访问当前父类中的方法，使用super.方法(); b.访问属性：访问当前父类中的属性，super.属性 c.访问构造方法：调用父类的构造方法，只能写在第一行，super(值) 重写：当父类的方法不满足子类的需求的时候需要重写，只改变方法体 ​    （此处区分重载和重写的">
+<meta property="og:description" content="概念：根据功能不同，把所有内容分成3个模块1.界面层(User Interface layer)：放所有关于界面的功能的类  2.逻辑层( Business Logic Layer )：格局业务逻辑，拿到的数据不呢个直接使用，需要进行到dao层处理  3.数据层( Data access layer )：存储数据，获取真实对数据操作​        &#x2F;&#x2F;层与层之间传递参数以及返回数据都是使用对象调">
 <meta property="og:locale" content="en_US">
 <meta property="og:image" content="http://yoursite.com/images/og_image.png">
-<meta property="article:published_time" content="2020-02-19T09:06:58.000Z">
-<meta property="article:modified_time" content="2020-02-20T09:13:06.033Z">
+<meta property="article:published_time" content="2020-02-20T09:44:20.000Z">
+<meta property="article:modified_time" content="2020-02-20T09:51:01.015Z">
 <meta property="article:author" content="creep">
 <meta property="article:tag" content="java">
 <meta name="twitter:card" content="summary">
@@ -81,7 +81,7 @@
         <div class="navbar-brand is-flex-center">
             <a class="navbar-item navbar-logo" href="/">
             
-                <img src="/images/logo.svg" alt="Extends(继承)" height="28">
+                <img src="/images/logo.svg" alt="3层架构" height="28">
             
             </a>
         </div>
@@ -134,7 +134,7 @@
         
         <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
             <div class="level-left">
-                <time class="level-item has-text-grey" datetime="2020-02-19T09:06:58.000Z">2020-02-19</time>
+                <time class="level-item has-text-grey" datetime="2020-02-20T09:44:20.000Z">2020-02-20</time>
                 
                 <div class="level-item">
                 <a class="has-link-grey -link" href="/categories/java%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/">java学习笔记</a>
@@ -144,7 +144,7 @@
                 <span class="level-item has-text-grey">
                     
                     
-                    2 minutes read (About 348 words)
+                    a minute read (About 134 words)
                 </span>
                 
                 
@@ -153,28 +153,16 @@
         
         <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
             
-                Extends(继承)
+                3层架构
             
         </h1>
         <div class="content">
-            <p>extends —继承父类非私有的属性和方法</p>
-<p><em>注意点：不能多继承，但是可以多层次继承</em></p>
-<p><strong>super</strong>—指的是父类本身</p>
-<p>a.访问方法：访问当前父类中的方法，使用super.方法();</p>
-<p>b.访问属性：访问当前父类中的属性，super.属性</p>
-<p>c.访问构造方法：调用父类的构造方法，只能写在第一行，super(值)</p>
-<p><em>重写：当父类的方法不满足子类的需求的时候需要重写，只改变方法体</em></p>
-<p>​    <em>（此处区分重载和重写的区别）</em></p>
-<h3 id="toString方法："><a href="#toString方法：" class="headerlink" title="toString方法："></a>toString方法：</h3><p>//toString —在输出对象的时候自动调用，所有的类都有这个toString，toString的方法是object</p>
-<p>//object的toString是输出这个对象的地址，如果我们不想输出地址，就重写</p>
-<p>//@Override //表示这个方法是重写</p>
-<p>​    </p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@Override</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">public</span> String <span class="title">toString</span><span class="params">()</span> </span>&#123;<span class="comment">//生成一个重写的toString --输出所有的属性</span></span><br><span class="line"></span><br><span class="line">​	<span class="keyword">return</span> <span class="string">"Workers [name="</span> + name + <span class="string">", sex="</span> + sex + <span class="string">", age="</span> + age + <span class="string">"]"</span>;</span><br><span class="line"></span><br><span class="line">​	&#125;</span><br></pre></td></tr></table></figure>
+            <h3 id="概念：根据功能不同，把所有内容分成3个模块"><a href="#概念：根据功能不同，把所有内容分成3个模块" class="headerlink" title="概念：根据功能不同，把所有内容分成3个模块"></a>概念：根据功能不同，把所有内容分成3个模块</h3><pre><code>1.界面层(User Interface layer)：放所有关于界面的功能的类
 
-<h3 id="equals方法："><a href="#equals方法：" class="headerlink" title="equals方法："></a>equals方法：</h3><p>//object的方法，用于比较，原生方法为==</p>
-<p>//基本类型用==比较时，比较的是值；而引用类型比较的是地址；</p>
-<p>//重写equals用于判断两个属性是否相等</p>
-<p>//jdk提供的类，几乎都是重写了equals，这些重写的equals都是比较的值</p>
+2.逻辑层( Business Logic Layer )：格局业务逻辑，拿到的数据不呢个直接使用，需要进行到dao层处理
+
+3.数据层( Data access layer )：存储数据，获取真实对数据操作</code></pre><p>​        //层与层之间传递参数以及返回数据都是使用对象调用方法</p>
+<p><img src="/.com//C:%5CWindows%5CSystem32%5Cmyblog%5Csource_posts%5Carchitecture%5C3%E5%B1%82%E6%9E%B6%E6%9E%84.jpg" alt="picture"></p>
 
         </div>
         
@@ -208,17 +196,10 @@
 <div class="card card-transparent">
     <div class="level post-navigation is-flex-wrap is-mobile">
         
-        <div class="level-start">
-            <a class="level level-item has-link-grey  article-nav-prev" href="/2020/02/19/Encapsulation/">
-                <i class="level-item fas fa-chevron-left"></i>
-                <span class="level-item">Encapsulation(封装)</span>
-            </a>
-        </div>
-        
         
         <div class="level-end">
-            <a class="level level-item has-link-grey  article-nav-next" href="/2020/02/19/Class/">
-                <span class="level-item">Class(类)</span>
+            <a class="level level-item has-link-grey  article-nav-next" href="/2020/02/20/Polymorphism/">
+                <span class="level-item">Polymorphism(多态)</span>
                 <i class="level-item fas fa-chevron-right"></i>
             </a>
         </div>
@@ -760,7 +741,7 @@
             <div class="level-start has-text-centered-mobile">
                 <a class="footer-logo is-block has-mb-6" href="/">
                 
-                    <img src="/images/logo.svg" alt="Extends(继承)" height="28">
+                    <img src="/images/logo.svg" alt="3层架构" height="28">
                 
                 </a>
                 <p class="is-size-7">

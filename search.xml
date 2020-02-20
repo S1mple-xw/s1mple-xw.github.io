@@ -4,6 +4,31 @@
   
     
     <entry>
+      <title>3层架构</title>
+      <link href="/2020/02/20/Architecture/"/>
+      <url>/2020/02/20/Architecture/</url>
+      
+        <content type="html"><![CDATA[<h3 id="概念：根据功能不同，把所有内容分成3个模块"><a href="#概念：根据功能不同，把所有内容分成3个模块" class="headerlink" title="概念：根据功能不同，把所有内容分成3个模块"></a>概念：根据功能不同，把所有内容分成3个模块</h3><pre><code>1.界面层(User Interface layer)：放所有关于界面的功能的类2.逻辑层( Business Logic Layer )：格局业务逻辑，拿到的数据不呢个直接使用，需要进行到dao层处理3.数据层( Data access layer )：存储数据，获取真实对数据操作</code></pre><p>​        //层与层之间传递参数以及返回数据都是使用对象调用方法</p><p><img src="/.com//C:%5CWindows%5CSystem32%5Cmyblog%5Csource_posts%5Carchitecture%5C3%E5%B1%82%E6%9E%B6%E6%9E%84.jpg" alt="picture"></p>]]></content>
+      
+      
+      <categories>
+          
+          <category> java学习笔记 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> java </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>Polymorphism(多态)</title>
       <link href="/2020/02/20/Polymorphism/"/>
       <url>/2020/02/20/Polymorphism/</url>
